@@ -1,5 +1,6 @@
 ## fibonachi
 import math
+from multiprocessing.dummy import Array
 from re import M
 from tkinter import N
 
@@ -28,4 +29,12 @@ while i < n:
     fib2 = fib_sum
     i = i + 1
     print("Значение этого элемента:", fib_sum)
-    
+
+mapik = {'0': [["####"],["#  #"],["#  #"],["####"]],
+
+
+}
+a = dict()
+
+arr = [5, 6]
+#arr1=Array
