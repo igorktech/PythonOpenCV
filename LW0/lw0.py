@@ -1,19 +1,7 @@
-## fibonachi
+
 import math
-from multiprocessing.dummy import Array
-from re import M
-from tkinter import N
 
-
-# def fibonacci(n):
-#     if n in (1, 2):
-#         return 1
-#     print(fibonacci(n - 1) + fibonacci(n - 2))
-#     return fibonacci(n - 1) + fibonacci(n - 2)
- 
- 
-#print(fibonacci(10))
-
+## fibonachi
 fib1 = 0
 fib2 = 1
  
@@ -30,11 +18,26 @@ while i < n:
     i = i + 1
     print("Значение этого элемента:", fib_sum)
 
-mapik = {'0': [["####"],["#  #"],["#  #"],["####"]],
+## string
+mapik = {0: ["####","#  #","#  #","#  #","####"],
+         1: ["   #","  ##"," # #","   #","   #"],
+         2: [" ## ","#  #","  # ","#   ","####"],
+         3: ["####","   #","####","   #","####"],
+         4: ["#  #","#  #","####","   #","   #"],
+         5: ["####","#   ","####","   #","####"],
+         6: ["####","#   ","####","#  #","####"],
+         7: ["####","   #","   #","   #","   #"],
+         8: ["####","#  #","####","#  #","####"],
+         9: ["####","#  #","####","   #","####"],
+         }
+
+print(mapik.get(0)[0])
+n = input("Введите число: ")
+i = 0
 
 
-}
-a = dict()
-
-arr = [5, 6]
-#arr1=Array
+for i in range(5):
+    string = "" 
+    for k in range(len(n)):
+        string+=(str(mapik.get(int(n[k]))[i])+" ")
+    print(string)

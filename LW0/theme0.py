@@ -38,13 +38,13 @@
 # else:
 #     print("no")
 
-# r = range(10)
-# print(r)
-# l = list(r)
-# l.append(22)
-# print(l[10])
-# k = (1, 2)
-# print(k[0])
+r = range(10)
+print(r)
+l = list(r)
+l.append(22)
+print(l[10])
+k = (1, 2)
+print(k[0])
 
 # a = 0
 # while (a < 10):
