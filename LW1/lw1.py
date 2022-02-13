@@ -37,27 +37,27 @@ fontColor              = (0,0,0)
 thickness              = 1
 lineType               = 2
 
-cv2.putText(img2,'окружность', 
-    bottomLeftCornerOfText, 
-    font, 
+cv2.putText(img2,'окружность',
+    bottomLeftCornerOfText,
+    font,
     fontScale,
     fontColor,
     thickness,
     lineType)
 
 bottomLeftCornerOfText = (120,460)
-cv2.putText(img2,'прямоугольник', 
-    bottomLeftCornerOfText, 
-    font, 
+cv2.putText(img2,'прямоугольник',
+    bottomLeftCornerOfText,
+    font,
     fontScale,
     fontColor,
     thickness,
     lineType)
 
 bottomLeftCornerOfText = (100,240)
-cv2.putText(img2,'линия', 
-    bottomLeftCornerOfText, 
-    font, 
+cv2.putText(img2,'линия',
+    bottomLeftCornerOfText,
+    font,
     fontScale,
     fontColor,
     thickness,
@@ -68,13 +68,17 @@ cv2.destroyWindow("DRAW")
 
 
 #3
-img2  = np.full((480, 640, 3), (1, 1, 1),np.float64)
 
+img_color  = np.full((320, 480, 3), (1, 1, 1),np.float64)
 
-
-
-
-
+i = 0
+k = 0
+for i in range(0,6):
+    for k in range(0,4):
+        cv2.rectangle(img_color,(i*160+(k%2)*80,k*80),(i*160+80+(k%2)*80,k*80+80),(1,0,1),-1)
+cv2.imshow("CHESS",img_color)
+cv2.waitKey(0)
+cv2.destroyWindow("CHESS")
 #4
 idx = 0
 cap = cv2.VideoCapture(idx)
