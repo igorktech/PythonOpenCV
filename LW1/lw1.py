@@ -77,18 +77,21 @@ for i in range(0,6):
     for k in range(0,4):
         cv2.rectangle(img_color,(i*160+(k%2)*80,k*80),(i*160+80+(k%2)*80,k*80+80),(1,0,1),-1)
 cv2.imshow("CHESS",img_color)
-cv2.waitKey(0)
+cv2.waitKey(0)q
 cv2.destroyWindow("CHESS")
 #4
 idx = 0
 cap = cv2.VideoCapture(idx)
+key = 0
 
 while True:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     cv2.imshow('gray feed', gray)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    # key = cv2.waitKey(1)
+    if  cv2.waitKey(1) == ord('q'):
         break
+
 
 
         
