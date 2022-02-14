@@ -77,7 +77,7 @@ for i in range(0,6):
     for k in range(0,4):
         cv2.rectangle(img_color,(i*160+(k%2)*80,k*80),(i*160+80+(k%2)*80,k*80+80),(1,0,1),-1)
 cv2.imshow("CHESS",img_color)
-cv2.waitKey(0)q
+cv2.waitKey(0)
 cv2.destroyWindow("CHESS")
 #4
 idx = 0
