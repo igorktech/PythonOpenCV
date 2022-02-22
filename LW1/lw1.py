@@ -19,8 +19,10 @@ cv2.imshow("IMAGE SCALE DOWN 2", img_scale_down2)
 cv2.waitKey(9000)
 cv2.destroyWindow("IMAGE SCALE DOWN 2")
 
-img_scale_down4 = cv2.resize(img_gray, (0, 0), fx=0.25, fy=0.25)
+img_scale_down4 = cv2.imread("LW1\\IMG.jpg",cv2.IMREAD_REDUCED_GRAYSCALE_4)
+#cv2.resize(img_gray, (0, 0), fx=0.25, fy=0.25)
 cv2.imshow("IMAGE SCALE DOWN 4", img_scale_down4)
+cv2.resizeWindow("IMAGE SCALE DOWN 4",[100,100])
 cv2.waitKey(11000)
 cv2.destroyWindow("IMAGE SCALE DOWN 4")
 
@@ -63,6 +65,7 @@ cv2.putText(img2,'линия',
     thickness,
     lineType)
 cv2.imshow("DRAW", img2)
+cv2.imwrite("LW1\\IMG_DRAW.jpg", img2*255)
 cv2.waitKey(5000)
 cv2.destroyWindow("DRAW")
 
