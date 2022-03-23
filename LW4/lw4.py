@@ -1,30 +1,30 @@
 
 
-import cv2
 import numpy as np
+import cv2.cv2 as cv2
 
 
 #1
-# IMAGE_1 = "LW4\\text.png"
+IMAGE_1 = "text.png"
 
-# img_text = cv2.imread(IMAGE_1, cv2.IMREAD_GRAYSCALE)
-# cv2.imshow("IMAGE", img_text)
+img_text = cv2.imread(IMAGE_1, cv2.IMREAD_GRAYSCALE)
+cv2.imshow("IMAGE", img_text)
 
-# img_1_t = cv2.adaptiveThreshold(img_text,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,25,9)
-# cv2.imshow("1",img_1_t)
-# kernel = np.ones((5, 5), np.uint8)
-# img_erode0 = cv2.erode(img_1_t, kernel, iterations=1)
-# cv2.imshow("Erode0", img_erode0)
-# kernel = np.ones((3, 3), np.uint8)
-# img_open0 = cv2.morphologyEx(img_erode0, cv2.MORPH_CLOSE, kernel, iterations=3)
-# cv2.imshow("Open00", img_open0)
+img_1_t = cv2.adaptiveThreshold(img_text,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,25,9)
+cv2.imshow("1",img_1_t)
+kernel = np.ones((5, 5), np.uint8)
+img_erode0 = cv2.erode(img_1_t, kernel, iterations=1)
+cv2.imshow("Erode0", img_erode0)
+kernel = np.ones((3, 3), np.uint8)
+img_open0 = cv2.morphologyEx(img_erode0, cv2.MORPH_CLOSE, kernel, iterations=3)
+cv2.imshow("Open00", img_open0)
 
-# cv2.waitKey(0)
+cv2.waitKey(0)
 
 
 #2
 kernel = np.ones((3, 3), np.uint8)
-cap = cv2.VideoCapture("LW4\\lab2-4.mp4")
+cap = cv2.VideoCapture("lab2-4.mp4")
 while cap.isOpened():
     ret, frame = cap.read()
     # if frame is read correctly ret is True
