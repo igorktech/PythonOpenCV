@@ -45,5 +45,6 @@ for i in range(len(contours2)):
 show("PATTERN", img_1_color)
 show("RESULT", img_2_color)
 
+
 while cv2.waitKey(0) !=ord('q'):
     pass

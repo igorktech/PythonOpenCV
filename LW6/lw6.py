@@ -21,6 +21,11 @@ kernel = np.ones((3, 3), np.uint8)
 img_open0 = cv2.morphologyEx(img_t, cv2.MORPH_CLOSE, kernel, iterations=3)
 # find all external contours
 contours, hierarchy = cv2.findContours(img_open0, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_TC89_L1)
+#RETR_CCOMP exterior/ interior contour  
+#RETR_LIST
+#RETR_EXTERNAL
+#RETR_TREE
+
 print("contours", contours)
 
 _, img_open0 = cv2.threshold(img_open0, 140, 255, cv2.THRESH_BINARY_INV)
